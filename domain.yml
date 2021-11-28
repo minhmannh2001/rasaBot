@@ -1,0 +1,56 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hế lô, chào bạn.
+  - text: Chào bạn, rất vui khi gặp bạn. Mình là chatbot chăm sóc sức khỏe. Có gì cứ hỏi mình nha.
+  - text: Xin chào, rất vui được biết bạn.
+  - text: Xin chào. Mình có thể giúp bạn gì không?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Gửi cho bạn xem ảnh này nè.
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Đừng buồn nữa, mình có cái này cho bạn xem nè.
+  utter_did_that_help:
+  - text: Bạn cảm thấy thế nào rồi?
+  - text: Bạn thấy ổn hơn chưa?
+  - text: Sao rồi bạn? Đỡ hơn chứ?
+  utter_happy:
+  - text: Tuyệt vời, hãy luôn vui tươi nha.
+  - text: Đúng vậy, hãy luôn vui vẻ nha.
+  - text: Mình rất vui khi nghe điều đó.
+  utter_goodbye:
+  - text: vậy nha, chào bạn.
+  - text: Hẹn gặp lại bạn sau.
+  - text: Chào bạn ạ.
+  - text: bái bai.
+  utter_iamabot:
+  - text: Ừ, mình là chatbot của Rasa bạn ạ.
+  - text: Mình là chatbot, rất vui được gặp bạn.
+  - text: Đúng vậy, bạn ngạc nhiên không
+actions: []
+forms: {}
+e2e_actions: []
