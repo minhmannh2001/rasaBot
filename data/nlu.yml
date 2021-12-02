@@ -18,6 +18,32 @@ nlu:
     - xin chào bạn
     - xin chào
     - Hi
+    - chào
+    - chào bạn
+    - Chào bạn
+- intent: inform
+  examples: |
+    - [Hà Nội](location)
+    - [Thái Nguyên](location)
+    - [Đồng Nai](location)
+    - [Khánh Hòa](location)
+    - [Thái Bình](location)
+    - [Lạng Sơn](location)
+    - [Huế](location)
+    - [Cần Thơ](location)
+    - mình ở [Hà Nội](location)
+- intent: search_provider
+  examples: |
+    - Tôi muốn tìm một [bệnh viện](facility_type)
+    - Tìm giúp tôi một [bệnh viện](facility_type)
+    - Chỉ cho tôi một [cơ sở y tế](facility_type)
+    - [bệnh viện](facility_type)
+    - Tôi cần tìm một [bệnh viện](facility_type) ở [Hà Nội](location)
+    - Tôi đang cần tìm một [cơ sở y tế](facility_type)
+    - bạn có thể giúp mình tìm một bệnh viện không
+    - mình đang cần tìm một bệnh viện
+    - mình cần tìm một [cơ sở y tế](facility_type)
+    - mình cần tìm một [bệnh viện](facility_type) gần nhất
 - intent: goodbye
   examples: |
     - good afternoon
@@ -43,6 +69,8 @@ nlu:
     - Yes
     - mình thấy ổn hơn rồi
     - mình cảm thấy ổn hơn rồi
+    - rồi
+    - Mình cảm thấy khoẻ hơn rồi nha
 - intent: deny
   examples: |
     - no
@@ -52,6 +80,8 @@ nlu:
     - don't like that
     - no way
     - not really
+    - ko
+    - chưa
 - intent: mood_great
   examples: |
     - perfect
@@ -71,6 +101,7 @@ nlu:
     - I’m fine
     - i'm fine
     - i fine
+    - oke ạ
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -92,6 +123,7 @@ nlu:
     - mình buồn
     - mình đang buồn
     - tôi đang buồn
+    - Bạn ơi, mình buồn
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -101,6 +133,10 @@ nlu:
     - who are you
     - what your'name
     - are you a bot
+    - are u a bot
+    - bạn là chatbot à
 - intent: thanks
   examples: |
     - ok, cám ơn bạn
+    - cám ơn
+    - Cám ơn bạn

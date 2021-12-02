@@ -5,6 +5,10 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- inform:
+    use_entities: true
+- search_provider:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -21,8 +25,25 @@ intents:
     use_entities: true
 - thanks:
     use_entities: true
-entities: []
-slots: {}
+entities:
+- location
+- facility_type
+slots:
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  facility_type:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  address:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hế lô, chào bạn.
@@ -51,6 +72,18 @@ responses:
   - text: Ừ, mình là chatbot của Rasa bạn ạ.
   - text: Mình là chatbot, rất vui được gặp bạn.
   - text: Đúng vậy, bạn ngạc nhiên không
-actions: []
+  utter_ask_location:
+  - text: Bạn muốn tìm ở thành phố nào?
+  - text: Mình chưa biết bạn muốn tìm ở đâu cả. Bạn cho mình xin địa chỉ.
+  - text: Mình phải tìm ở khu vực nào?
+  - text: Để tìm {facility_type} gần bạn nhất. Mình cần địa chỉ á.
+  utter_how_can_i_help:
+  - text: Mình có thể giúp bạn tìm các cơ sở y tế gần bạn nhất. Bạn có muốn mình giúp không?
+  - text: Mình có khả năng định vị các cơ sở y tế. Mình có thể giúp gì cho bạn?
+  - text: Mình có thể làm gì để giúp bạn?
+  - text: Bạn cần mình giúp gì không?
+  - text: Vấn đề của bạn là gì vậy?
+actions:
+- action_facility_search
 forms: {}
 e2e_actions: []
