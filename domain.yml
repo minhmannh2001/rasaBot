@@ -25,6 +25,14 @@ intents:
     use_entities: true
 - thanks:
     use_entities: true
+- kind_vaccine:
+    use_entities: false
+- inject_condition:
+    use_entities: false
+- inject_cured:
+    use_entities: false
+- inject_infected:
+    use_entities: false
 entities:
 - location
 - facility_type
@@ -83,6 +91,30 @@ responses:
   - text: Mình có thể làm gì để giúp bạn?
   - text: Bạn cần mình giúp gì không?
   - text: Vấn đề của bạn là gì vậy?
+  utter_kind_vaccine:
+  - text: |
+      Hiện nay, Việt Nam 6 loại vaccine phòng Covid-19 đã được cấp phép
+        1. Vaccine COVID-19 Vaccine AstraZeneca
+        2. Vaccine Gam-COVID-Vac (tên khác là SPUTNIK V)
+        3. Vaccine Vero Cell của Sinopharm
+        4. Vaccine Comirnaty của Pfizer/BioNTech
+        5. Vaccine Spikevax (Tên khác là: Covid-19 Vaccine Moderna)
+        6. COVID-19 Vaccine Janssen/
+  utter_inject_condition:
+  - text: |
+      Những người trên 18 tuổi, khỏe mạnh, đều được đăng ký tiêm vaccine ngừa COVID-19. Bộ Y tế cũng đang triển khai tiêm cho trẻ từ 12-17 tuổi
+      Khi tiêm chủng bạn sẽ được hỏi về tiền căn dị ứng và bệnh nền trước đó để phân loại xem anh/chị có được tiêm chủng hay không:
+        - Chống chỉ định của tiêm chủng khi anh/chị có tiền sử sốc phản vệ hoặc phản ứng phản vệ với bất kỳ yếu tố dị nguyên nào trước đó, hoặc anh/chị nằm trong chống chỉ định của nhà sản xuất vắc xin đó (mỗi vắc xin sẽ có chống chỉ định khác nhau)
+        - Nếu đang mắc các bệnh cấp tính, hoặc bệnh nền mạn tính của anh/chị đang tiến triển, anh/chị sẽ phải trì hoãn việc tiêm ngừa cho đến khi sức khỏe ổn định. Ngoài ra các bệnh mạn tính khác nếu đang điều trị ổn (ví dụ như tăng huyết áp, đái tháo đường,… đang kiểm soát tốt) thì sẽ được bác sĩ thăm khám và đánh giá trước khi tiêm chủng, và theo dõi sát sao hơn
+  utter_inject_infected:
+  - text: |
+      Những người nhiễm COVID-19 có các triệu chứng nên chờ được tiêm chủng cho đến khi họ khỏi bệnh và đáp ứng các tiêu chí để ngừng cô lập; những người không có các triệu chứng cũng nên chờ cho đến khi họ đáp ứng các tiêu chí trước khi được tiêm chủng.
+      Hướng dẫn này cũng áp dụng với những người nhiễm COVID-19 trước khi tiêm liều vắc-xin thứ hai.
+  utter_inject_cured:
+  - text: |
+      Bạn nên tiêm chủng bất kể bạn đã bị nhiễm COVID-19 hay chưa bởi vì:
+       - Nghiên cứu vẫn chưa cho thấy bạn sẽ được bảo vệ trong thời gian bao lâu nhằm tránh tái mắc COVID-19 sau khi khỏi bệnh COVID-19.
+       - Tiêm chủng giúp bảo vệ bạn ngay cả khi bạn vị đã mắc COVID-19.
 actions:
 - action_facility_search
 forms: {}
