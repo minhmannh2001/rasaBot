@@ -149,6 +149,7 @@ nlu:
     - ok, cám ơn bạn
     - cám ơn
     - Cám ơn bạn
+
 - intent: folk_ask_about_symptom
   examples: |
     - Bạn cho mình biết về các triệu chứng của bệnh covid với
@@ -172,3 +173,27 @@ nlu:
     - Bạn biết gì về covid 19?
     - mình cần tìm hiểu về covid 19
     - cho mình tìm hiểu thông tin về covid 19
+
+
+- intent: kind_vaccine
+  examples: |
+    - Việt Nam có những loại vắc-xin nào nhỉ?
+    - Giờ muốn tiêm vắc-xin thì có loại nào ạ?
+    - Tôi muốn hỏi về các loại vắc-xin?
+
+- intent: inject_condition
+  examples: |
+    - Điều kiện để được tiêm vắc-xin là gì ạ?
+    - Sức khỏe thế nào thì được  tiêm chủng ạ?
+    - Tiêm chủng cần những điều kiện gì ạ?
+- intent: inject_cured
+  examples: |
+    - Nếu đã nhiễm Covid 19 và đã khỏi bệnh có cần tiêm vaccine không ?
+    - Dính F0 nhưng đã chữa khỏi rồi cần tiêm nữa không nhỉ?
+    - Nếu bị mắc Covid nhưng đã khỏi, thì có cần tiêm nữa không ạ?
+- intent: inject_infected
+  examples: |
+    - Nếu đang bị mắc Covid thì có được tiêm vắc-xin không?
+    - F0 có được tiêm vắc-xin ngừa Covid 19 không ạ?
+    - Nếu đang bị dương tính với Covid 19 thì có tiêm không ạ?
+

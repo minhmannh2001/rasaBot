@@ -71,4 +71,26 @@ stories:
   - intent: exclamation_sentence
   - action: utter_be_careful_keep_safe
 
+- story: QA vaccine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: kind_vaccine
+  - action: utter_kind_vaccine
+  - intent: inject_condition
+  - action: utter_inject_condition
+  - intent: thanks
+  - action: utter_goodbye 
+- story: QA inject vaccine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inject_condition
+  - action: utter_inject_condition
+  - intent: inject_infected
+  - action: utter_inject_infected
+  - intent: inject_cured
+  - action: utter_inject_cured
+  - intent: thanks
+  - action: utter_goodbye
 
