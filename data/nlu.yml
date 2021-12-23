@@ -21,6 +21,9 @@ nlu:
     - chào
     - chào bạn
     - Chào bạn
+    - xin chaof
+    - xin chao
+    - alo
 - intent: inform
   examples: |
     - [Hà Nội](location)
@@ -32,6 +35,8 @@ nlu:
     - [Huế](location)
     - [Cần Thơ](location)
     - mình ở [Hà Nội](location)
+    - [Hà Nội](location) nha bạn
+    - [Hà Nội](location) nha
 - intent: search_provider
   examples: |
     - Tôi muốn tìm một [bệnh viện](facility_type)
@@ -44,6 +49,9 @@ nlu:
     - mình đang cần tìm một bệnh viện
     - mình cần tìm một [cơ sở y tế](facility_type)
     - mình cần tìm một [bệnh viện](facility_type) gần nhất
+    - tôi muốn tìm một [bệnh](facility_type) vienẹ gần nhà
+    - tôi muốn tìm benh vien
+    - mình cần tìm một [bệnh viện](facility_type)
 - intent: goodbye
   examples: |
     - good afternoon
@@ -71,6 +79,7 @@ nlu:
     - mình cảm thấy ổn hơn rồi
     - rồi
     - Mình cảm thấy khoẻ hơn rồi nha
+    - có, mình cảm thấy tốt hơn rồi
 - intent: deny
   examples: |
     - no
@@ -140,3 +149,26 @@ nlu:
     - ok, cám ơn bạn
     - cám ơn
     - Cám ơn bạn
+- intent: folk_ask_about_symptom
+  examples: |
+    - Bạn cho mình biết về các triệu chứng của bệnh covid với
+    - Người nhiễm bệnh covid có những triệu chứng gì nhỉ?
+    - Mình cần biết thêm thông tin về các triệu chứng của bệnh covid
+    - Bị nhiễm covid thì có những triệu chứng gì?
+    - mình muốn biết các triệu chứng của covid ấy
+- intent: exclamation_sentence
+  examples: |
+    - Ôi nguy hiểm quá!
+    - Thật đáng sợ!
+    - Sợ quá!
+    - Thật nguy hiểm!
+    - đáng sợ quá
+- intent: need_help_for_covid
+  examples: |
+    - Mình đang tìm hiểu thông tin về dịch covid 19
+    - Cho mình hỏi về thông tin liên quan đến covid 19
+    - Cho tôi biết về các thông tin của covid 19
+    - Bạn cung cấp cho tôi về thông tin của dịch covid được không?
+    - Bạn biết gì về covid 19?
+    - mình cần tìm hiểu về covid 19
+    - cho mình tìm hiểu thông tin về covid 19

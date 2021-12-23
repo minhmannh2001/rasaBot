@@ -1,0 +1,204 @@
+[
+  {
+    "text": "Đồng Nai",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Đồng Nai",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 5,
+        "end": 8,
+        "confidence_entity": 0.7050291299819946,
+        "value": "Nai",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "mình ở Hà Nội",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "Hà Nội",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "facility_type",
+        "start": 5,
+        "end": 6,
+        "confidence_entity": 0.4953082501888275,
+        "value": "ở",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "location",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.9977055191993713,
+        "value": "Hà Nội",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tôi cần tìm một bệnh viện ở Hà Nội",
+    "entities": [
+      {
+        "start": 16,
+        "end": 25,
+        "value": "bệnh viện",
+        "entity": "facility_type"
+      },
+      {
+        "start": 28,
+        "end": 34,
+        "value": "Hà Nội",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "facility_type",
+        "start": 16,
+        "end": 27,
+        "confidence_entity": 0.7387720942497253,
+        "value": "bệnh viện ở",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "location",
+        "start": 28,
+        "end": 34,
+        "confidence_entity": 0.9963041543960571,
+        "value": "Hà Nội",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "bạn có thể giúp mình tìm một bệnh viện không",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "facility_type",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.8727129697799683,
+        "value": "bệnh viện",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "y",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "facility_type",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9740051031112671,
+        "value": "y",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Thái Bình",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Thái Bình",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9988829493522644,
+        "value": "Thái",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Huế",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Huế",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Khánh Hòa",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Khánh Hòa",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.7510388493537903,
+        "value": "Khánh",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cần Thơ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Cần Thơ",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 4,
+        "end": 7,
+        "confidence_entity": 0.9040761590003967,
+        "value": "Thơ",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "mình đang cần tìm một bệnh viện",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "facility_type",
+        "start": 22,
+        "end": 31,
+        "confidence_entity": 0.8272504210472107,
+        "value": "bệnh viện",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

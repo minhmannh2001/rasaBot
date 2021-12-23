@@ -57,3 +57,18 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: asking about symptomps of covid
+  steps:
+  - intent: need_help_for_covid
+  - slot_was_set:
+    - is_about_covid: true
+  - action: utter_how_can_i_help
+  - slot_was_set:
+    - is_about_covid: false
+  - intent: folk_ask_about_symptom
+  - action: bot_inform_about_symptomp
+  - intent: exclamation_sentence
+  - action: utter_be_careful_keep_safe
+
+

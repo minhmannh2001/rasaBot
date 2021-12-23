@@ -25,6 +25,12 @@ intents:
     use_entities: true
 - thanks:
     use_entities: true
+- folk_ask_about_symptom:
+    use_entities: true
+- exclamation_sentence:
+    use_entities: true
+- need_help_for_covid:
+    use_entities: true
 entities:
 - location
 - facility_type
@@ -42,6 +48,16 @@ slots:
   address:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  is_about_covid:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  is_about_facility_search:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
     auto_fill: true
     influence_conversation: true
 responses:
@@ -78,12 +94,36 @@ responses:
   - text: Mình phải tìm ở khu vực nào?
   - text: Để tìm {facility_type} gần bạn nhất. Mình cần địa chỉ á.
   utter_how_can_i_help:
-  - text: Mình có thể giúp bạn tìm các cơ sở y tế gần bạn nhất. Bạn có muốn mình giúp không?
-  - text: Mình có khả năng định vị các cơ sở y tế. Mình có thể giúp gì cho bạn?
+  - condition:
+    - name: is_about_facility_search
+      type: slot
+      value: true
+    text: Mình có thể giúp bạn tìm các cơ sở y tế gần bạn nhất. Bạn có muốn mình giúp không?
+  - condition:
+    - name: is_about_facility_search
+      type: slot
+      value: true
+    text: Mình có khả năng định vị các cơ sở y tế. Mình có thể giúp gì cho bạn?
   - text: Mình có thể làm gì để giúp bạn?
   - text: Bạn cần mình giúp gì không?
   - text: Vấn đề của bạn là gì vậy?
+  - condition:
+    - name: is_about_covid
+      type: slot
+      value: true
+    text: Mình có thể giúp bạn giải đáp được đấy. Bạn muốn biết về thông tin gì?
+  - condition:
+    - name: is_about_covid
+      type: slot
+      value: true
+    text: Bạn cần mình giải đáp vấn đề gì liên quan đến covid thì cứ nói nha.
+  utter_be_careful_keep_safe:
+  - text: Bạn nên cẩn thận nha.
+  - text: Bạn nên chú ý đến sức khỏe.
+  - text: Nhớ giữ gìn sức khỏe nha bạn.
+  - text: Sức khỏe là vàng. Bạn hãy luôn cẩn thận.
 actions:
 - action_facility_search
+- bot_inform_about_symptomp
 forms: {}
 e2e_actions: []

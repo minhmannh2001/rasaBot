@@ -36,3 +36,24 @@ class ActionFacilitySearch(Action):
         dispatcher.utter_message(text=f"Đây là địa chỉ của {facility}: {address}")
 
         return [SlotSet("address", address)]
+
+
+class BotInformAboutSymptomp(Action):
+
+    def name(self) -> Text:
+        return "bot_inform_about_symptomp"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+
+        dispatcher.utter_message(text="Ok. bạn đợi tí, để mình viết ra.")
+        dispatcher.utter_message(text="Đây nhé, hơi dài. Nhưng mình tóm tắt lại phần nào rồi.")
+        dispatcher.utter_message(text="Các triệu chứng thường gặp nhất: sốt, ho, mệt mỏi, mất vị giác hoặc khứu giác.")
+        dispatcher.utter_message(text="""Các triệu chứng ít gặp hơn: đau đầu, đau họng, đau nhức, tiêu chảy, da nổi mẩn
+                                         hay ngón tay hoặc ngón chân bị tấy đỏ hoặc tím tái, mắt đỏ hoặc ngứa.""")
+        dispatcher.utter_message(text="""Các triệu chứng nghiêm trọng: khó thở, mất khả năng nói hay cử động hoặc thấy
+                                        lú lẫn, đau ngực.""")
+
+
+
